@@ -15,4 +15,3 @@ cd ./Forget_Shopping_list
 Ctrl+C
 ./vendor/bin/sail down
 ```
-gitにpushする際は停止させてから作業してください
