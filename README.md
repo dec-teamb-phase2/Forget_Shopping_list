@@ -6,7 +6,7 @@ DEC phase2 課題 team_b
 ```
 cd ~
 cd ./Forget_Shopping_list
-./vendor/bin/sail up
+./vendor/bin/sail up -d
 ```
 
 ## 停止方法
