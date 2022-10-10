@@ -24,7 +24,7 @@
               <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="item_price">Price</label>
               <input class="border py-2 px-3 text-grey-darkest" type="integer" name="item_price" id="item_price">
             </div>
-            <button type="submit" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
+            <button type="submit" class="w-full py-3 mt-6 font-medium tracking-widest text-brack uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
               Create
             </button>
           </form>
