@@ -15,15 +15,15 @@
           <form class="mb-6" action="{{ route('item.store') }}" method="POST">
             @csrf
             <div class="flex flex-col mb-4">
-              <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="tweet">Name</label>
+              <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="tweet"><center>NAME</center></label>
               <input class="border py-2 px-3 text-grey-darkest" type="text" name="item_name" id="item_name">
             </div>
             <div class="flex flex-col mb-4">
-              <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="item_link">Link</label>
+              <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="item_link"><center>LINK</center></label>
               <input class="border py-2 px-3 text-grey-darkest" type="text" name="item_link" id="item_link">
             </div>
             <div class="flex flex-col mb-4">
-              <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="item_price">Price</label>
+              <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="item_price"><center>PRICE</center></label>
               <input class="border py-2 px-3 text-grey-darkest" type="integer" name="item_price" id="item_price">
             </div>
             <button type="submit" class="w-full py-3 mt-6 font-medium tracking-widest text-brack uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
