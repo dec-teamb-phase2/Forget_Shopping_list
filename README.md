@@ -13,7 +13,6 @@ cd ./Forget_Shopping_list
 ## 停止方法
 
 ```
-Ctrl+C
 ./vendor/bin/sail down
 ```
 
