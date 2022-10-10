@@ -19,7 +19,7 @@
                 <!-- item 一覧画面 -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                 <x-nav-link :href="route('item.index')" :active="request()->routeIs('item.index')">
-                    {{ __('MYPAGE') }}
+                    {{ __('mypage') }}
                 </x-nav-link>
                 </div>
                 <!-- item create画面-->
