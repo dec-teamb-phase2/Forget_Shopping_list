@@ -15,7 +15,8 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return view('item.index');
+        $items = Item::getAllOrderByUpdated_at();
+        return view('item.index',compact('items'));
     }
 
     /**
