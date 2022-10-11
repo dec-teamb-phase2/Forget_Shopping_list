@@ -20,10 +20,10 @@
                         ＜＜このアプリの使い方＞＞
                     </p>
                     <p>
-                        hogehoge
+                        Createページで商品名とリンク、価格を入力します。
                     </p>
                     <p>
-                        hoge
+                        mypage画面でCreateページで入力した商品の確認ができます。
                     </p>
                     <p>
                         hogehoge
