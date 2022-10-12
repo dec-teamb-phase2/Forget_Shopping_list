@@ -15,7 +15,8 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return view('item.index');
+        $items = Item::getAllOrderByUpdated_at();
+        return view('item.index',compact('items'));
     }
 
     /**
@@ -36,7 +37,22 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'item_name' => 'required | max:191',
+            'item_price' => 'required',
+          ]);
+          // バリデーション:エラー
+          if ($validator->fails()) {
+            return redirect()
+              ->route('item.create')
+              ->withInput()
+              ->withErrors($validator);
+          }
+          // create()は最初から用意されている関数
+          // 戻り値は挿入されたレコードの情報
+          $result = Item::create($request->all());
+          // ルーティング「todo.index」にリクエスト送信（一覧ページに移動）
+          return redirect()->route('item.index');
     }
 
     /**
@@ -81,6 +97,7 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $result = Tweet::find($id)->delete();
+        return redirect()->route('tweet.index');
     }
 }
