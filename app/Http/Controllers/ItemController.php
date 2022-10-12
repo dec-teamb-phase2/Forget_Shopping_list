@@ -97,6 +97,7 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $result = Tweet::find($id)->delete();
+        return redirect()->route('tweet.index');
     }
 }
