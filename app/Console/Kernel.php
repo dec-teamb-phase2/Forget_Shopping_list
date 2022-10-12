@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('model:prune')->everyFiveMinutes();
+        $schedule->command('model:prune')->everyTwoMinutes();
     }
 
     /**

@@ -14,7 +14,7 @@ class Item extends Model
         'id',
         'created_at',
         'updated_at',
-      ];
+    ];
 
     public static function getAllOrderByUpdated_at()
     {
