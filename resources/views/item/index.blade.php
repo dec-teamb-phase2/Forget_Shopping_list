@@ -17,6 +17,7 @@
             </thead>
             <tbody>
               @foreach ($items as $item)
+              @if ($item->user_id == Auth::user()->id)
               <tr class="hover:bg-grey-lighter">
                 <td class="py-4 px-6 border-b border-grey-light">
                     <!--{{$item->item_name}} が 何を表示するかを決めている部分です。-->
@@ -29,6 +30,7 @@
                   </div>
                 </td>
               </tr>
+              @endif
               @endforeach
             </tbody>
           </table>

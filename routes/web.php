@@ -15,7 +15,11 @@ use App\Http\Controllers\ItemController;
 */
 Route::resource('item', ItemController::class);
 
-Route::get('/', function () {
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::resource('item', ItemController::class);
+//   });
+
+  Route::get('/', function () {
     return view('welcome');
 });
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use App\Models\Item;
+use Auth;
 
 class ItemController extends Controller
 {
@@ -50,7 +51,9 @@ class ItemController extends Controller
           }
           // create()は最初から用意されている関数
           // 戻り値は挿入されたレコードの情報
-          $result = Item::create($request->all());
+        //   $result = Item::create($request->all());
+        $data = $request->merge(['user_id' => Auth::user()->id])->all();
+        $result = Item::create($data);
           // ルーティング「todo.index」にリクエスト送信（一覧ページに移動）
           return redirect()->route('item.index');
     }
