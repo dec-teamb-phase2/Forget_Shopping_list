@@ -21,12 +21,10 @@
               <tr class="hover:bg-grey-lighter">
                 <td class="py-4 px-6 border-b border-grey-light">
                     <!--{{$item->item_name}} が 何を表示するかを決めている部分です。-->
-                  <center>
-                  <h3 class="text-left font-bold text-lg text-grey-dark">{{$item->item_name}}</h3>
-                  <h3 class="text-left font-bold text-lg text-grey-dark">{{$item->item_link}}</h3>
-                  <h3 class="text-left font-bold text-lg text-grey-dark">{{$item->item_price}}</h3>
+                  <h3 class="text-left font-bold text-lg text-grey-dark"><center>{{$item->item_name}}</center></h3>
+                  <h3 class="text-left font-bold text-lg text-grey-dark"><center>{{$item->item_link}}</center></h3>
+                  <h3 class="text-left font-bold text-lg text-grey-dark"><center>{{$item->item_price}}</center></h3>
                   <div class="flex">
-                  </center>
                     <!-- 更新ボタン -->
                     <!-- 削除ボタン -->
                     <form action="{{ route('item.destroy',$item->id) }}" method="POST" class="text-left">
