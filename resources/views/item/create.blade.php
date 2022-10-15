@@ -30,7 +30,7 @@
               <label class="mb-2 uppercase font-semibold text-lg text-grey-darkest" for="item_time"><center>ITEM_TIME</center></label>
               <input class="border py-2 px-3 text-grey-darkest" type="text" name="item_time" id="item_time">
             </div> -->
-            <button type="submit" class="w-full py-3 mt-6 font-semibold tracking-widest text-brack uppercase bg-black shadow-lg hover:bg-gray-900">
+            <button type="text" class="w-full py-3 mt-6 font-semibold tracking-widest text-brack uppercase bg-black shadow-lg hover:bg-gray-900">
               Create
             </button>
           </form>
