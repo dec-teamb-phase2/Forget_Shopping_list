@@ -41,21 +41,21 @@ class ItemController extends Controller
         $validator = Validator::make($request->all(), [
             'item_name' => 'required | max:191',
             'item_price' => 'required',
-          ]);
+            ]);
           // バリデーション:エラー
-          if ($validator->fails()) {
+            if ($validator->fails()) {
             return redirect()
-              ->route('item.create')
-              ->withInput()
-              ->withErrors($validator);
-          }
+                ->route('item.create')
+                ->withInput()
+                ->withErrors($validator);
+            }
           // create()は最初から用意されている関数
           // 戻り値は挿入されたレコードの情報
         //   $result = Item::create($request->all());
         $data = $request->merge(['user_id' => Auth::user()->id])->all();
         $result = Item::create($data);
           // ルーティング「todo.index」にリクエスト送信（一覧ページに移動）
-          return redirect()->route('item.index');
+            return redirect()->route('item.index');
     }
 
     /**
@@ -100,7 +100,7 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
-        $result = Tweet::find($id)->delete();
-        return redirect()->route('tweet.index');
+        $result = Item::find($id)->delete();
+        return redirect()->route('item.index');
     }
 }
