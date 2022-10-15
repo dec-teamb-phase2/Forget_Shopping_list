@@ -26,7 +26,7 @@
                         mypage画面でCreateページで入力した商品の確認ができます。
                     </p>
                     <p>
-                        hogehoge
+                        CREATEしたアイテムは上位hoge個を除いてhoge日でリストの下から消去されます。
                     </p>
                 </div>
             </div>
