@@ -15,9 +15,10 @@ use App\Http\Controllers\ItemController;
 */
 Route::resource('item', ItemController::class);
 
-// Route::group(['middleware' => 'auth'], function () {
-//     Route::resource('item', ItemController::class);
-//   });
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/reconstruct', [ItemController::class, 'recon'])->name('item.reconstruct');
+    Route::resource('item', ItemController::class);
+  });
 
   Route::get('/', function () {
     return view('welcome');

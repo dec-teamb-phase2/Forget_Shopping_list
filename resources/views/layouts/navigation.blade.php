@@ -22,6 +22,12 @@
                     {{ __('mypage') }}
                 </x-nav-link>
                 </div>
+                <!-- deleted_item 一覧画面 -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <x-nav-link :href="route('item.reconstruct')" :active="request()->routeIs('item.reconstruct')">
+                    {{ __('deleted_item') }}
+                </x-nav-link>
+                </div>
                 <!-- item create画面-->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                 <x-nav-link :href="route('item.create')" :active="request()->routeIs('item.create')">
@@ -83,6 +89,12 @@
         <div class="pt-2 pb-3 space-y-1">
         <x-responsive-nav-link :href="route('item.index')" :active="request()->routeIs('item.index')">
             {{ __('Index') }}
+        </x-responsive-nav-link>
+        </div>
+        <!-- 削除されたitemの一覧ページへのリンクを追加 -->
+        <div class="pt-2 pb-3 space-y-1">
+        <x-responsive-nav-link :href="route('item.reconstruct')" :active="request()->routeIs('item.reconstruct')">
+            {{ __('deleted_item') }}
         </x-responsive-nav-link>
         </div>
         <!--createページへのリンク追加-->
