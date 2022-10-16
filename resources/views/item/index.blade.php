@@ -22,8 +22,10 @@
                 <td class="py-4 px-6 border-b border-grey-light">
                     <!--{{$item->item_name}} が 何を表示するかを決めている部分です。-->
                   <h3 class="font-bold text-lg text-grey-dark">{{$item->item_name}}</h3>
-                  <h3 class="font-bold text-lg text-grey-dark">{{$item->item_link}}</h3>
+                  <!-- <h3 class="font-bold text-lg text-grey-dark">{{$item->item_link}}</h3> -->
+                  <a href={{$item->item_link}}>商品リンク</a>
                   <h3 style="text-align:right" class="font-bold text-lg text-grey-dark">￥{{$item->item_price}}</h3>
+                  <!-- <a href="https://www.deepl.com/ja/translator">text</a> -->
                   <div class="flex">
                     <!-- 更新ボタン -->
                     <form action="{{ route('item.edit',$item->id) }}" method="GET" class="text-left">
