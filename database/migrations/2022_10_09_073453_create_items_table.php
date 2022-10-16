@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->string('item_name');
-            $table->string('item_link');
+            $table->text('item_name');
+            $table->text('item_link');
             $table->integer('item_price');
             // $table->integer('item_time');
             $table->timestamps();
