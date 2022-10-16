@@ -12,7 +12,7 @@
           <table class="text-center w-full border-collapse">
             <thead>
               <tr>
-                <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light">ITEM LIST</th>
+                <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-lg text-grey-dark border-b border-grey-light">WISH LIST</th>
               </tr>
             </thead>
             <tbody>
@@ -27,8 +27,7 @@
                     <!--{{$item->item_name}} が 何を表示するかを決めている部分です。-->
                   <h3 class="font-bold text-lg text-grey-dark">{{$item->item_name}}</h3>
                   <!-- <h3 class="font-bold text-lg text-grey-dark">{{$item->item_link}}</h3> -->
-                  <a href={{$item->item_link}}>商品リンク</a>
-                  <h3 style="text-align:right" class="font-bold text-lg text-grey-dark">￥{{$item->item_price}}</h3>
+                  <a class="color:skyblue" href={{$item->item_link}}>☆━━━☆・‥…━━━☆商品リンク☆━━━…‥・☆━━━☆</a>
                   <!-- <a href="https://www.deepl.com/ja/translator">text</a> -->
                   <div class="flex">
                     <!-- 更新ボタン -->
@@ -51,6 +50,7 @@
                       </button>
                     </form>
                   </div>
+                  <h3 style="text-align:right" class="font-bold text-lg text-grey-dark">￥{{$item->item_price}}</h3>
                 </td>
               </tr>
               <!-- $amount += $item->item_price -->
