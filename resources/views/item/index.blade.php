@@ -27,7 +27,7 @@
                     <!--{{$item->item_name}} が 何を表示するかを決めている部分です。-->
                   <h3 class="font-bold text-lg text-grey-dark">{{$item->item_name}}</h3>
                   <!-- <h3 class="font-bold text-lg text-grey-dark">{{$item->item_link}}</h3> -->
-                  <a class="color:skyblue" href={{$item->item_link}}>☆━━━☆・‥…━━━☆商品リンク☆━━━…‥・☆━━━☆</a>
+                  <a class="color:skyblue" href={{$item->item_link}} target="_blank">☆━━━☆・‥…━━━☆商品リンク☆━━━…‥・☆━━━☆</a>
                   <!-- <a href="https://www.deepl.com/ja/translator">text</a> -->
                   <div class="flex">
                     <!-- 更新ボタン -->
