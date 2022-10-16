@@ -129,8 +129,8 @@ class ItemController extends Controller
     public function recon()
     {
         // $items = Item::getAllOrderByUpdated_at();
-        $items = Item::withTrashed();
-        // dd($items);
+        $items = Item::onlyTrashed()->get();
+        // ddd($items);
         return view('item.reconstruct',compact('items'));
     }
 }
