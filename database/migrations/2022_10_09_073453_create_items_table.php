@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('item_name');
             $table->text('item_link');
             $table->integer('item_price');
-            // $table->integer('item_time');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
