@@ -39,7 +39,7 @@ class ItemController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'item_name' => 'required | max:191',
+            'item_name' => 'required',
             'item_price' => 'required',
             ]);
           // バリデーション:エラー
@@ -77,7 +77,8 @@ class ItemController extends Controller
      */
     public function edit($id)
     {
-        return view('item.create');
+        $item = Item::find($id);
+        return view('item.edit', compact('item'));
     }
 
     /**
@@ -89,7 +90,24 @@ class ItemController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'item_name' => 'required',
+            'item_price' => 'required',
+            ]);
+          // バリデーション:エラー
+            if ($validator->fails()) {
+            return redirect()
+                ->route('item.edit', $id)
+                ->withInput()
+                ->withErrors($validator);
+            }
+          // create()は最初から用意されている関数
+          // 戻り値は挿入されたレコードの情報
+        //   $result = Item::create($request->all());
+        // $data = $request->merge(['user_id' => Auth::user()->id])->all();
+        $result = Item::find($id)->update($request->all());
+          // ルーティング「todo.index」にリクエスト送信（一覧ページに移動）
+        return redirect()->route('item.index');
     }
 
     /**
