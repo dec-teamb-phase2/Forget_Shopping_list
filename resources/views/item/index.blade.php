@@ -16,6 +16,10 @@
               </tr>
             </thead>
             <tbody>
+                <!-- $amount = 0 -->
+                @php
+                $amount = 0;
+                @endphp
               @foreach ($items as $item)
               @if ($item->user_id == Auth::user()->id)
               <tr class="hover:bg-grey-lighter">
@@ -49,13 +53,19 @@
                   </div>
                 </td>
               </tr>
+              <!-- $amount += $item->item_price -->
+              @php
+              $amount += $item->item_price;
+              @endphp
               @endif
               @endforeach
+              <!-- amountの表示 -->
             </tbody>
-          </table>
-        </div>
-      </div>
+        </table>
+        <footer style="text-align: right;" class="font-bold text-lg text-grey-dark">合計金額￥{{$amount}}</footer>
     </div>
-  </div>
+</div>
+</div>
+</div>
 </x-app-layout>
 
