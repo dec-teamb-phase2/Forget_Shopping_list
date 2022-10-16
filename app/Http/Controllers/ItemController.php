@@ -58,15 +58,15 @@ class ItemController extends Controller
             return redirect()->route('item.index');
     }
 
-    /**
-     * Display the specified resource.
+     /**
+     * Display a listing of the resource.
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $items = Item::getAllOrderByUpdated_at();
+        return view('item.index',compact('items'));
     }
 
     /**
@@ -120,5 +120,17 @@ class ItemController extends Controller
     {
         $result = Item::find($id)->delete();
         return redirect()->route('item.index');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function recon()
+    {
+        // $items = Item::getAllOrderByUpdated_at();
+        $items = Item::withTrashed();
+        // dd($items);
+        return view('item.reconstruct',compact('items'));
     }
 }
