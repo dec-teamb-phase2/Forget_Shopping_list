@@ -118,7 +118,7 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
-        ddd(Item::find($id));
+        // ddd(Item::find($id));
         $result = Item::find($id)->delete();
         return redirect()->route('item.index');
     }
