@@ -22,7 +22,7 @@ class Item extends Model
     {
         return self::orderBy('updated_at', 'desc')->get();
     }
-    public function destroy()
+    public function prunable()
     {
         return static::where('created_at', '<=', now()->subSeconds(10));
         //10秒前のデータを削除
