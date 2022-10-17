@@ -14,6 +14,7 @@ use App\Http\Controllers\ItemController;
 |
 */
 Route::resource('item', ItemController::class);
+Route::delete('/restore{id}', [ItemController::class, 'restore'])->name('item.restore');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/reconstruct', [ItemController::class, 'recon'])->name('item.reconstruct');
