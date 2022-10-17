@@ -118,8 +118,21 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
+        ddd(Item::find($id));
         $result = Item::find($id)->delete();
         return redirect()->route('item.index');
+    }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function restore($id){
+        $result = Item::onlyTrashed()->get();
+        // ddd($result->find($id));
+        $result = $result->find($id)->restore();
+        return redirect()->route('item.reconstruct');
     }
     /**
      * Display a listing of the resource.
