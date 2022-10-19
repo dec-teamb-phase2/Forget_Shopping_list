@@ -22,9 +22,11 @@ class Item extends Model
     {
         return self::orderBy('updated_at', 'desc')->get();
     }
-    public function prunable()
-    {
-        return static::where('created_at', '<=', now()->subSeconds(10));
-        //10秒前のデータを削除
-    }
+    // public function softdeletes()
+    // {
+    //     // $result = Item::find($id)->delete();
+    //     // return redirect()->route('item.index');
+    //     return static::where('updated_at', '<=', now()->subSeconds(10));
+    //     //10秒前のデータを削除
+    // }
 }
