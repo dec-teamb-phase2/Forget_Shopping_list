@@ -26,10 +26,10 @@
                         ・mypage画面でCreateページで入力した商品の確認ができます。
                     </p>
                     <p>
-                        ・CREATEしたアイテムは上位hoge個を除いてhoge日でmypageのリストの下から消去されます。(未実装)
+                        ・CREATEしたアイテムはhoge日でmypageのリストの下から消去されます。
                     </p>
                     <p>
-                        ・hoge日経ってmypageのリストから削除されたアイテムはdereted_itemから参照できます。(未実装)
+                        ・hoge日経ってmypageのリストから削除されたアイテムはdereted_itemから参照できます。
                     </p>
                 </div>
             </div>
